@@ -7,8 +7,10 @@
 
     function AppController($scope, $timeout) {
         var self = this;
-        ///////////////////////////////////需要binding到view的放上面,並依照字母排序//////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////
         self.add = add;
+        self.addContent='stop';
+        self.addValue= false;
         self.changConfig =changConfig;
         self.config = {
             visible: true, // default: true
@@ -17,6 +19,11 @@
             autorefresh: true, // default: true
             refreshDataOnly: true // default: false
         };
+        self.chartClick = chartClick;
+    self.chartData = [
+            [65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 19, 86, 27, 90]
+        ];
         self.data = [{
             key: "Cumulative Return",
             values: [
@@ -30,6 +37,7 @@
                 {"label": "H", "value": -5.13132321}
             ]
         }];
+        self.labels= ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
         self.options = {
             chart: {
                 type: 'discreteBarChart',
@@ -65,28 +73,48 @@
         self.show = 'hide';
 
 
-///////////////////////////////////不需要binding到view的放下面,並依照字母排序，若有需先執行的function先執行//////////////////////////////////////////////////////////////
-        addValue();
+
+///////////////////////////////////?//////////////////////////////////////////////////////////////
+
+        Chart.defaults.global.animationEasing= "easeOutElastic";
+        autoAddValue();
 
         function add(label, value){
             self.data[0].values.push({"label": label, "value": parseFloat(value)});
             console.log(self.data[0].values.length);
         }
 
-        function addValue() {
-            var indexOfValue = Math.floor((Math.random() * self.data[0].values.length));
-            self.data[0].values[indexOfValue].value += Math.random() * 5;
-            $timeout(addValue, 1);
+        function autoAddValue() {
+
+            if(self.addValue){
+
+                self.addContent='stop';
+                var indexOfData = Math.floor((Math.random() * self.data[0].values.length));
+                var indexOfChartData =parseInt(Math.random() * self.chartData.length);
+                var indexOfChartData2 =parseInt( Math.random() * self.chartData[indexOfChartData].length);
+                self.chartData[indexOfChartData][indexOfChartData2] +=parseInt( Math.random()*10);
+                self.data[0].values[indexOfData].value += Math.random() * 5;
+            }
+            else{
+                self.addContent='start';
+            }
+             $timeout(autoAddValue, 1);
         }
 
         function changConfig(visible){
             self.config.visible = visible;
             if (visible) {
                 self.show = 'hide';
+
             }
             else {
                 self.show = 'show';
             }
+        }
+        function chartClick(points,evt){
+
+            console.log(points,evt);
+
         }
     }
 })();
