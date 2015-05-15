@@ -10,6 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     var translateEn = {
         Test:'Test i18n',
+        State1:'State1',
+        Chart:'Chart',
+        Grid:'Grid',
+        Grid_Name:'Name',
         HEADLINE: 'WelCome to my App',
         PARAGRAPH: 'Hello!',
         NAMESPACE: {
@@ -25,6 +29,10 @@
     var translateCh =
     {
         Test:'測試多語系',
+        State1:'區塊1',
+        Chart:'圖表',
+        Grid:'表格',
+        Grid_Name:'姓名',
         HEADLINE: '歡迎到我的 App',
         PARAGRAPH: '你好!',
         NAMESPACE: {
@@ -40,10 +48,12 @@
     };
 
     function ctrl($translate) {
+        console.log("F\n".repeat(10));
         var self = this;
-        this.changeLanguage = function(langKey){
+        self.changeLanguage = function(langKey){
             $translate.use(langKey);
         }
+        self.name='Larry Yang';
     }
 
     function routerConfig($stateProvider, $urlRouterProvider) {

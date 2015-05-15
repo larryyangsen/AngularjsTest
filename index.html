@@ -48,7 +48,7 @@
 
             <p translate="VARIABLE_REPLACEMENT" translate-values="{name:'Larry'}"></p>
 
-            <p translate="VARIABLE_REPLACEMENT" translate-value-name="Larry"></p>
+            <p translate="VARIABLE_REPLACEMENT" translate-value-name="{{c.name}}"></p>
         </div>
     </div>
     <div class="col-lg-6 col-lg-offset-4 col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-4">
@@ -59,9 +59,9 @@
 </div>
 <hr/>
 <ul class="nav navbar-collapse bg-info">
-    <a ui-sref="state1">State1</a>
-    <a ui-sref="state2">Chart</a>
-    <a ui-sref="state3">UIGrid</a>
+    <a ui-sref="state1">{{'State1'|translate}}</a>
+    <a ui-sref="state2">{{'Chart'|translate}}</a>
+    <a ui-sref="state3">{{'Grid'|translate}}</a>
 </ul>
 <div class="container-fluid">
     <div class="row">
