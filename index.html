@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="iNu">
 <head lang="en">
     <meta charset="UTF-8">
-    <script src="bower_components/jquery/jquery-1.8.3.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="bower_components/d3/d3.js"></script>
     <script src="bower_components/nvd3/nv.d3.js"></script>
     <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
@@ -12,60 +13,59 @@
     <script src="bower_components/Chart.js/Chart.js"></script>
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+
     <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css"/>
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
-    <title>NVD3</title>
+    <link rel="stylesheet" href="style/style.css">
+    <title title-data></title>
     <style>
         .grid {
             width: 100%;
             height: 600px;
         }
+
+        .fixed {
+            position:absolute;
+            top: 0;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
 <script src="app.js"></script>
+<script src="directive/directive.js"></script>
 <script src="controller/ChartController.js"></script>
 <script src="controller/GridController.js"></script>
-<div class="container-fluid" ng-controller="ctrl as c">
-    <h1 translate>{{'Test'}}</h1>
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6">
-            <p>{{'HEADLINE'|translate}}</p>
-
-            <p>{{'PARAGRAPH'|translate}}</p>
-
-            <p translate>PASSED_AS_TEXT</p>
-
-            <p translate="PASSED_AS_ATTRIBUTE"></p>
-
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
-            <p translate>{{'PASSED_AS_INTERPOLATION'}}</p>
-
-            <p translate="{{'PASSED_AS_INTERPOLATION'}}"></p>
-
-            <p translate="VARIABLE_REPLACEMENT" translate-values="{name:'Larry'}"></p>
-
-            <p translate="VARIABLE_REPLACEMENT" translate-value-name="{{c.name}}"></p>
-        </div>
-    </div>
-    <div class="col-lg-6 col-lg-offset-4 col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-4">
-        <button ng-click="c.changeLanguage('ch')" translate>{{'BUTTON_LANG_CH'}}</button>
-        <button ng-click="c.changeLanguage('en')" translate>{{'BUTTON_LANG_EN'}}</button>
-    </div>
-
-</div>
-<hr/>
-<ul class="nav navbar-collapse bg-info">
-    <a ui-sref="state1">{{'State1'|translate}}</a>
-    <a ui-sref="state2">{{'Chart'|translate}}</a>
-    <a ui-sref="state3">{{'Grid'|translate}}</a>
-</ul>
+<script src="controller/TranslateController.js"></script>
+<script src="controller/State1Controller.js"></script>
 <div class="container-fluid">
     <div class="row">
-        <div ui-view></div>
+        <div class="col-lg-1 col-md-2 col-sm-12">
+            <ul class="nav nav-pills">
+                <li><a ui-sref="state1"><h3>{{'State1'|translate}}</h3></a></li>
+                <li><a ui-sref="state2"><h3>{{'Chart'|translate}}</h3></a></li>
+                <li><a ui-sref="state3"><h3>{{'Grid'|translate}}</h3></a></li>
+                <li><a ui-sref="state4"><h3>{{'i18n'|translate}}</h3></a></li>
+            </ul>
+
+
+        </div>
+        <div class="col-lg-11 col-md-10 col-sm-12" ui-view></div>
+    </div>
+    <div class="dropdown fixed" ng-controller="iNuCtrl as Ctrl">
+
+        <button class="btn-info dropdown-toggle" data-toggle="dropdown">language</button>
+        <ul class="dropdown-menu">
+            <li><a href="javascript:void(0)" ng-click="Ctrl.changeLanguage('ch')"
+                   translate>{{'BUTTON_LANG_CH'}}</a>
+            </li>
+            <li><a href="javascript:void(0)" ng-click="Ctrl.changeLanguage('en')"
+                   translate>{{'BUTTON_LANG_EN'}}</a>
+            </li>
+        </ul>
 
 
     </div>

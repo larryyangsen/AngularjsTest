@@ -1,0 +1,20 @@
+{
+  "iNu":"iNu",
+  "Test": "Test i18n",
+  "State1": "State1",
+  "Chart": "Chart",
+  "Grid": "Grid",
+  "i18n": "i18n",
+  "Grid_Name": "Name",
+  "HEADLINE": "WelCome to my App",
+  "PARAGRAPH": "Hello!",
+  "NAMESPACE": {
+    "PARAGRAPH": "And It comes with awesome features!"
+  },
+  "PASSED_AS_TEXT": "Hey there! I'm passed as text value",
+  "PASSED_AS_ATTRIBUTE": "I'm passed as attribute value, cool ha?",
+  "PASSED_AS_INTERPOLATION": "Beginners! I'm interpolated!",
+  "VARIABLE_REPLACEMENT": "Hi {{name}}",
+  "BUTTON_LANG_EN": "english",
+  "BUTTON_LANG_CH": "chinese"
+}

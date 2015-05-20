@@ -2,7 +2,7 @@
  * Created by Larry on 2015/5/6.
  */
 (function () {
-    angular.module('app')
+    angular.module('iNu')
         .controller('GridController', ["$scope", GridController]);
     function GridController($scope) {
         var self = this;

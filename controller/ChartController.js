@@ -2,12 +2,12 @@
  * Created by Larry on 2015/5/6.
  */
 (function(){
-    angular.module('app')
+    angular.module('iNu')
         .controller('ChartController', ["$scope", "$timeout", AppController]);
-
+    ///////////////////////////////////////////////////////////////////
     function AppController($scope, $timeout) {
         var self = this;
-        ///////////////////////////////////////////////////////////////////
+
         self.add = add;
         self.addContent='stop';
         self.addValue= false;

@@ -1,0 +1,20 @@
+{
+  "iNu":"如意",
+  "Test": "測試多語系",
+  "State1": "區塊1",
+  "Chart": "圖表",
+  "Grid": "表格",
+  "i18n": "多語系",
+  "Grid_Name": "姓名",
+  "HEADLINE": "歡迎!到我的 App",
+  "PARAGRAPH": "你好!",
+  "NAMESPACE": {
+    "PARAGRAPH": "即將帶來一些功能!"
+  },
+  "PASSED_AS_TEXT":"嗨! 我是由 text value帶過來的",
+  "PASSED_AS_ATTRIBUTE":"我是由 attribute value帶過來的, 酷嗎?",
+  "PASSED_AS_INTERPOLATION":"初學者! 我是插值!",
+  "VARIABLE_REPLACEMENT":"嗨 {{name}}",
+  "BUTTON_LANG_EN": "英文",
+  "BUTTON_LANG_CH": "中文"
+}

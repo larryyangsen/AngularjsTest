@@ -1,0 +1,7 @@
+<h1>{{'State1'|translate}}</h1>
+<input type="text" ng-model="State1.data.value1"   ng-model-options="{ updateOn: 'blur' }" ng-change="State1.click(State1.data.value1* State1.data.value2)" />
+*
+<input type="text" ng-model="State1.data.value2"  ng-change="State1.click(State1.data.value1* State1.data.value2)" />
+<br/>
+{{State1.data.value1* State1.data.value2}}
+
