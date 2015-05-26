@@ -2,7 +2,7 @@
  * Created by Larry on 2015/5/4.
  */
 (function () {
-    angular.module('iNu', ['ui.router', 'oc.lazyLoad',  'pascalprecht.translate','ui.bootstrap','ngSanitize'])
+    angular.module('app', ['ui.router', 'oc.lazyLoad',  'pascalprecht.translate','ui.bootstrap','ngSanitize'])
         .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', routerConfig])
         .config(['$translateProvider', translate])
         .controller('iNuCtrl', ['$translate', iNuCtrl]);

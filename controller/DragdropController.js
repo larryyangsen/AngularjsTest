@@ -2,7 +2,7 @@
  * Created by Larry on 2015/5/21.
  */
 (function(){
-    angular.module('iNu')
+    angular.module('app')
         .controller('DragdropController',['$scope',DragdropController]);
     ///////////////////////////////////////////////////////////////
     function DragdropController($scope){

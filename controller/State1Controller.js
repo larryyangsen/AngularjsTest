@@ -1,7 +1,7 @@
 /**
  * Created by Larry on 2015/5/19.
  */
-angular.module('iNu')
+angular.module('app')
     .controller('State1Controller', ['$scope', '$timeout', '$log', state1Controller]);
 
 

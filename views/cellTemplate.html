@@ -1,8 +1,8 @@
-<div>
-    <button title="more" class="glyphicon glyphicon-inbox btn btn-primary btn-circle"
+<div  ng-dblclick="grid.appScope.playAudio()">
+    <button title="more" class="glyphicon glyphicon-inbox btn btn-info btn-circle"
             ng-disabled="grid.appScope.disableButton(row.entity)"
             ng-click="grid.appScope.showDetail(row.entity)"></button>
-    <button title="play" class="glyphicon glyphicon-play btn btn-primary btn-circle"></button>
+    <button title="play" class="glyphicon glyphicon-play btn btn-primary btn-circle" ng-click="grid.appScope.playAudio()"></button>
     <div class="inline-div"><p class="model"
                                tooltip="{{row.entity.Business[0].module}}({{row.entity.Business[0].module_detail}})"
                                tooltip-placement="right">
@@ -32,4 +32,12 @@
             <hr/>
         </div>
     </div>
+</script>
+<script type="text/ng-template" id="cellModalPlay.html">
+    <div class="modal-header">
+        播放音檔
+    </div>
+    <audio controls >
+        <source src="8.mp3" type="audio/mpeg"/>
+    </audio>
 </script>

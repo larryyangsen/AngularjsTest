@@ -2,7 +2,7 @@
  * Created by Larry on 2015/5/6.
  */
 (function () {
-    angular.module('iNu')
+    angular.module('app')
         .controller('GridController', ["$scope", "$modal", GridController])
         .controller('ModalController', ["$scope", "$modalInstance", "datas", ModalController])
 
@@ -56,6 +56,7 @@
         };
         $scope.disableButton = disableButton;
         $scope.highlight = highlight;
+        $scope.playAudio = playAudio;
         $scope.showDetail = showDetailModal;
         //$scope.showMe = showMe;
 
@@ -68,7 +69,13 @@
                 return true;
             }
         }
-
+        function playAudio(){
+            var modalInstance = $modal.open({
+                animation:true,
+                templateUrl:'cellModalPlay.html',
+                size:'sm'
+            })
+        }
         function showDetailModal(entity) {
             var modalInstance = $modal.open({
                 animation: true,
@@ -111,8 +118,7 @@
         var keyword = entity.keyword;
         var content = entity.content;
         var keywordArray = new Array();
-        var html = '';
-        angular.forEach(keywordModule, function (item) {
+       angular.forEach(keywordModule, function (item) {
 
             keyword = keyword.replace(item, ',');
             keywordArray = keyword.split(",");

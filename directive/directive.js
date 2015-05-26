@@ -2,7 +2,7 @@
  * Created by Larry on 2015/5/18.
  */
 (function () {
-    angular.module('iNu')
+    angular.module('app')
         .directive('titleData', ['$rootScope', '$timeout', '$translate', '$filter', titleData])
 
 

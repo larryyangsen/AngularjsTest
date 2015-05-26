@@ -2,7 +2,7 @@
  * Created by Larry on 2015/5/6.
  */
 (function(){
-    angular.module('iNu')
+    angular.module('app')
         .controller('ChartController', ["$scope", "$timeout", AppController]);
     ///////////////////////////////////////////////////////////////////
     function AppController($scope, $timeout) {
