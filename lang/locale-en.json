@@ -1,11 +1,14 @@
 {
-  "iNu":"iNu",
+  "iNu": "iNu",
   "Test": "Test i18n",
   "State1": "State1",
   "Chart": "Chart",
   "Grid": "Grid",
   "i18n": "i18n",
-  "Grid_Name": "Name",
+  "dragdrop": "DragDrop",
+  "SetModuleText": "Please Set Module Text",
+  "SetText":"Add Text",
+  "Business": "Bussiness",
   "HEADLINE": "WelCome to my App",
   "PARAGRAPH": "Hello!",
   "NAMESPACE": {

@@ -1,0 +1,37 @@
+#div-terms{
+    width: 360px;
+    height: 360px;
+}
+.grid {
+    width: 100%;
+    height: 600px;
+    rowHeight:100;
+}
+
+.fixed {
+    position:absolute;
+    top: 0;
+    right: 10px;
+}
+.inline-div{
+    display: inline;
+}
+div>p {
+    display: inline;
+
+}
+div{
+    text-align: left;
+}
+p.model{
+    background: #ccc;
+
+}
+span.highlight {
+    color: #F00;
+}
+.view{
+    background: #fff;
+    width: 90%;
+    height: 100%;
+}

@@ -5,7 +5,10 @@
   "Chart": "圖表",
   "Grid": "表格",
   "i18n": "多語系",
-  "Grid_Name": "姓名",
+  "dragdrop":"拖拉頁",
+  "Business": "業務模型",
+  "SetModuleText": "請設定模型文本",
+  "SetText":"添加文本",
   "HEADLINE": "歡迎!到我的 App",
   "PARAGRAPH": "你好!",
   "NAMESPACE": {

@@ -3,36 +3,26 @@
 <head lang="en">
     <meta charset="UTF-8">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/ocLazyLoad/dist/ocLazyLoad.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="bower_components/d3/d3.js"></script>
-    <script src="bower_components/nvd3/nv.d3.js"></script>
-    <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
-    <script src="bower_components/Chart.js/Chart.js"></script>
-    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+
+
     <script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
-    <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css"/>
-    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css"/>
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css"/>
+    <link rel="stylesheet" href="style/iNu.css">
+    <link rel="stylesheet" href="style/style.min.css">
     <title title-data></title>
-    <style>
-        .grid {
-            width: 100%;
-            height: 600px;
-        }
-
-        .fixed {
-            position:absolute;
-            top: 0;
-            right: 10px;
-        }
-    </style>
 </head>
 <body>
 <script src="app.js"></script>
@@ -41,21 +31,21 @@
 <script src="controller/GridController.js"></script>
 <script src="controller/TranslateController.js"></script>
 <script src="controller/State1Controller.js"></script>
+<script src="controller/DragdropController.js"></script>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-1 col-md-2 col-sm-12">
+        <div class="col-lg-1 col-md-1 col-sm-12">
             <ul class="nav nav-pills">
-                <li><a ui-sref="state1"><h3>{{'State1'|translate}}</h3></a></li>
-                <li><a ui-sref="state2"><h3>{{'Chart'|translate}}</h3></a></li>
-                <li><a ui-sref="state3"><h3>{{'Grid'|translate}}</h3></a></li>
-                <li><a ui-sref="state4"><h3>{{'i18n'|translate}}</h3></a></li>
+                <li><a ui-sref="state1"><h4>{{'State1'|translate}}</h4></a></li>
+                <li><a ui-sref="state2"><h4>{{'Chart'|translate}}</h4></a></li>
+                <li><a ui-sref="state3"><h4>{{'Grid'|translate}}</h4></a></li>
+                <li><a ui-sref="state4"><h4>{{'i18n'|translate}}</h4></a></li>
+                <li><a ui-sref="state5"><h4>{{'dragdrop'|translate}}</h4></a></li>
             </ul>
-
-
         </div>
-        <div class="col-lg-11 col-md-10 col-sm-12" ui-view></div>
+        <div class="col-lg-11 col-md-11 col-sm-12 view" ui-view></div>
     </div>
-    <div class="dropdown fixed" ng-controller="iNuCtrl as Ctrl">
+    <div data-drag="true" class="dropdown fixed" ng-controller="iNuCtrl as Ctrl">
 
         <button class="btn-info dropdown-toggle" data-toggle="dropdown">language</button>
         <ul class="dropdown-menu">

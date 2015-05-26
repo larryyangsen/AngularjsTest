@@ -1,0 +1,35 @@
+<div>
+    <button title="more" class="glyphicon glyphicon-inbox btn btn-primary btn-circle"
+            ng-disabled="grid.appScope.disableButton(row.entity)"
+            ng-click="grid.appScope.showDetail(row.entity)"></button>
+    <button title="play" class="glyphicon glyphicon-play btn btn-primary btn-circle"></button>
+    <div class="inline-div"><p class="model"
+                               tooltip="{{row.entity.Business[0].module}}({{row.entity.Business[0].module_detail}})"
+                               tooltip-placement="right">
+        {{row.entity.Business[0].module}}</p>
+
+        <p class="keyword" tooltip-template="'tooltipTemplate.html'" tooltip-placement="bottom">
+            {{row.entity.Business[0].keyword}}</p>
+
+    </div>
+</div>
+<script type="text/ng-template" id="tooltipTemplate.html">
+    <div>{{row.entity.Business[0].keyword}}
+        <hr/>
+        <div ng-bind-html="grid.appScope.highlight(row.entity.Business[0])"></div>
+    </div>
+</script>
+<script type="text/ng-template" id="cellModalContent.html">
+    <div class="modal-header">
+        業務模型
+    </div>
+    <div class="modal-body">
+        <div ng-repeat="business in ModalCtrl.datas.Business">
+
+            <div>模型：{{business.module}} <br/>({{business.module_detail}}) <br/>
+           關鍵詞：{{business.keyword}}<br/>(<p ng-bind-html="ModalCtrl.highlight(business)"></p>)
+            </div>
+            <hr/>
+        </div>
+    </div>
+</script>

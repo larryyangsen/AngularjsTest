@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <h1 translate>{{'Test'}}</h1>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <h1>{{'HEADLINE'|translate}}</h1>
+
+            <h2>{{'PARAGRAPH'|translate}}</h2>
+
+            <h3 translate>PASSED_AS_TEXT</h3>
+
+            <h3 translate="PASSED_AS_ATTRIBUTE"></h3>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <h1 translate>{{'PASSED_AS_INTERPOLATION'}}</h1>
+
+            <h2 translate="{{'PASSED_AS_INTERPOLATION'}}"></h2>
+
+            <h3 translate="VARIABLE_REPLACEMENT" translate-values="{name:'Larry'}"></h3>
+
+            <h3 translate="VARIABLE_REPLACEMENT" translate-value-name="{{transCtrl.name}}"></h3>
+        </div>
+    </div>
+
+
+</div>

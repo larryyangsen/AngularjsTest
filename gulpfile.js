@@ -10,18 +10,22 @@ gulp.task('server',function(){
 gulp.task('watch',function(){
    gulp.watch('*',['index']);
     gulp.watch('controller/*.js',['controller']);
-    gulp.watch('directive/*.js',['directive']);
+    gulp.watch('directive/*',['directive']);
     gulp.watch('lang/*.json',['lang']);
     gulp.watch('style/*.css',['css']);
+    gulp.watch('views/*.html',['views']);
 });
 gulp.task('index',function(){
     gulp.src(['*.js','*.html']).pipe(connect.reload());
+});
+gulp.task('views',function(){
+    gulp.src(['views/*.html']).pipe(connect.reload());
 });
 gulp.task('controller',function(){
    gulp.src('controller/*.js').pipe(connect.reload());
 });
 gulp.task('directive',function(){
-    gulp.src('directive/*.js').pipe(connect.reload());
+    gulp.src('directive/*').pipe(connect.reload());
 });
 gulp.task('lang',function(){
     gulp.src('lang/*.json').pipe(connect.reload());
