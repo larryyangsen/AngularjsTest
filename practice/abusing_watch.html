@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Abusing Watch</title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script>
+        (function () {
+            angular.module('app', [])
+                    .controller('badCtrl', BadController)
+                    .controller('goodCtrl', GoodController);
+            var genders = ['Male', 'Female'], labels = ['boy', 'girl'];
+
+            function BadController($scope) {
+                $scope.genders = genders;
+                $scope.selectedGender = genders[0];
+                $scope.$watch('selectedGender', function () {
+                    $scope.genderText = $scope.selectedGender === genders[0] ? labels[0] : labels[1];
+                });
+            }
+
+            function GoodController() {
+                var self = this;
+                self.genders = genders;
+                self._selectedGender = genders[1];
+                self.genderText = labels[1];
+            }
+
+            Object.defineProperty(GoodController.prototype, 'selectedGender', {
+                enumerable: true,
+                configurable: false,
+                get: function () {
+                    return this._selectedGender;
+                },
+                set: function (val) {
+                    if (val !== this._selectedGender) {
+                        this._selectedGender = val;
+                        this.genderText = val === this.genders[0] ? labels[0] : labels[1];
+                        console.log(this.genderText);
+                    }
+                }
+            })
+        })()
+    </script>
+</head>
+<body>
+<div ng-app="app">
+    <div ng-controller="badCtrl">
+        <select ng-options="g as g for g in genders" ng-model="selectedGender"></select>
+        It's a {{genderText}}
+    </div>
+
+    <div ng-controller="goodCtrl as ctrl">
+        <select ng-options="g as g for g in ctrl.genders" ng-model="ctrl.selectedGender"></select>
+        It's a {{ctrl.genderText}}
+    </div>
+</div>
+</body>
+</html>

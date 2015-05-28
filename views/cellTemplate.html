@@ -1,8 +1,8 @@
 <div  ng-dblclick="grid.appScope.playAudio()">
-    <button title="more" class="glyphicon glyphicon-inbox btn btn-info btn-circle"
+    <button title="more" class="glyphicon glyphicon-inbox btn btn-info btn-xs"
             ng-disabled="grid.appScope.disableButton(row.entity)"
             ng-click="grid.appScope.showDetail(row.entity)"></button>
-    <button title="play" class="glyphicon glyphicon-play btn btn-primary btn-circle" ng-click="grid.appScope.playAudio()"></button>
+    <button title="play" class="glyphicon glyphicon-play btn btn-primary btn-xs" ng-click="grid.appScope.playAudio()"></button>
     <div class="inline-div"><p class="model"
                                tooltip="{{row.entity.Business[0].module}}({{row.entity.Business[0].module_detail}})"
                                tooltip-placement="right">

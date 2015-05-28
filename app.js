@@ -99,15 +99,14 @@
                 data: {
                     title: 'dragdrop'
                 },
-                reslove: {
-                    loadPlugin: function ($ozLazyLoad) {
-                        return $ozLazyLoad.load([
+                resolve: {
+                    loadPlugin: function ($ocLazyLoad) {
+                        return $ocLazyLoad.load([
                                 {
                                     name:'ngDragDrop',
                                     files:['bower_components/angular-dragdrop/src/angular-dragdrop.js']
                                 }
-                            ]
-                        )
+                            ]);
                     }
                 }
             })
