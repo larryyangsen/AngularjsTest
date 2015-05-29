@@ -110,6 +110,43 @@
                     }
                 }
             })
+            .state('tabs',{
+                url:'/tabs',
+                views:{
+                    '':{
+                        templateUrl:'views/tabs.html',
+                        controller:'TabsController',
+                        controllerAs:'Tabs',
+                        data:{
+                            title:'tabs'
+                        }
+                    },
+                    'component':{
+                        templateUrl:'views/createComponent.html',
+                        controller:'modelController',
+                        controllerAs:'componentCtrl'
+                    }
+                }
+
+
+            })
+            .state('tabs.component',{
+                url:'/createComponent',
+                views:{
+
+                }
+
+            })
+            .state('tabs.module',{
+                url:'/createModule',
+                views:{
+                    'module':{
+                        templateUrl:'views/createModule.html',
+                        controller:'modelController',
+                        controllerAs:'moduleCtrl'
+                    }
+                }
+            })
 
     }
 
