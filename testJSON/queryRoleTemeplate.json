@@ -1,0 +1,47 @@
+{
+  "collection": {
+    "version": "1.0",
+    "href": "/queryroles/7c24f20e-4fae-4127-a6af-2dbb51696246/0",
+    "template": {
+      "data": [
+        {
+          "name": "title",
+          "value": ""
+        },
+        {
+          "name": "note",
+          "value": ""
+        },
+        {
+          "name": "employee_Ids",
+          "prompt": "employees",
+          "array": []
+        },
+        {
+          "name": "recfilter_Ids",
+          "prompt": "recfilters",
+          "array": []
+        },
+        {
+          "name": "recform_Id",
+          "prompt": "recform",
+          "value": ""
+        }
+      ]
+    },
+    "links": [
+      {
+        "href": "/recfilters",
+        "rel": "recfilters"
+      },
+      {
+        "href": "/recformList",
+        "rel": "recform"
+      },
+      {
+        "href": "/employees",
+        "rel": "employees"
+      }
+    ]
+  }
+}

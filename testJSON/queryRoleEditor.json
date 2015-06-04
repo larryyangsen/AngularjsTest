@@ -1,0 +1,56 @@
+{
+  "collection": {
+    "version": "1.0",
+    "href": "/queryRoles/38d7660d-cc9f-47f2-bcaf-20d3f3d42d6f/6",
+    "template": {
+      "data": [
+        {
+          "name": "title",
+          "value": "HAHA"
+        },
+        {
+          "name": "note",
+          "value": ""
+        },
+        {
+          "name": "employee_Ids",
+          "prompt": "employees",
+          "array": [
+            "sIvcZpThSum3jKnuYvzCjQ"
+          ]
+        },
+        {
+          "name": "recfilter_Ids",
+          "prompt": "recfilters",
+          "array": [
+            "1001689",
+            "1001691"
+          ]
+        },
+        {
+          "name": "recform_Id",
+          "prompt": "recform",
+          "value": "6da0fe3a-3665-48ea-acda-12896777cc4b"
+        }
+      ]
+    },
+    "links": [
+      {
+        "href": "/recfilters",
+        "rel": "recfilters"
+      },
+      {
+        "href": "/recformList",
+        "rel": "recform"
+      },
+      {
+        "href": "/employees",
+        "rel": "employees"
+      },
+      {
+        "href": "/queryRoles/38d7660d-cc9f-47f2-bcaf-20d3f3d42d6f/6",
+        "rel": "remove"
+      }
+    ]
+  }
+}

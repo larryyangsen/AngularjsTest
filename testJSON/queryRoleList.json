@@ -1,0 +1,22 @@
+{
+	"collection": {
+		"version": "1.0",
+		"href": "/queryRoleList",
+		"items": [{
+			"href": "/queryRoleDetail.json",
+			"data": [{
+				"name": "title",
+				"value": "成交件確認小組"
+			}],
+			"links": [{
+				"href": "queryRoleList/4c368759-64ef-4a40-a232-a6a6d73a68f4",
+				"rel": "DELETE"
+			}]
+		}
+		],
+		"links": [{
+			"href": "/queryRoleTemeplate.json",
+			"rel": "creator"
+		}]
+	}
+}

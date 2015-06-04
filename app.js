@@ -3,6 +3,7 @@
  */
 (function () {
     angular.module('app', ['ui.router', 'oc.lazyLoad',  'pascalprecht.translate','ui.bootstrap','ngSanitize'])
+        .constant('URI_PATH','testJSON/')
         .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', routerConfig])
         .config(['$translateProvider', translate])
         .controller('iNuCtrl', ['$translate', iNuCtrl]);

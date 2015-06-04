@@ -1,8 +1,30 @@
 <h1>{{'State1'|translate}}</h1>
-<input type="text" ng-model="State1.data.value1"   ng-model-options="{ updateOn: 'blur' }" ng-change="State1.click(State1.data.value1* State1.data.value2)" />
+<input type="text" ng-model="State1.data.value1" ng-model-options="{ updateOn: 'blur' }"
+       ng-change="State1.click(State1.data.value1* State1.data.value2)"/>
 *
-<input type="text" ng-model="State1.data.value2"  ng-change="State1.click(State1.data.value1* State1.data.value2)" />
+<input type="text" ng-model="State1.data.value2" ng-change="State1.click(State1.data.value1* State1.data.value2)"/>
 <br/>
 {{State1.data.value1* State1.data.value2}}
 
 <number-picker number="1"></number-picker>
+
+<div class="jumbotron" style="background: #f0f0f0;">
+    <div ng-class="State1.setClass($index)" ng-repeat="data in State1.datas" ng-include="'temp2'" ng-init="i=data"></div>
+</div>
+<div class="jumbotron" style="background: #f1a899;">
+    <div ng-class="State1.setClass($index)" ng-repeat="data in State1.datas" ng-include="'temp2'" ng-init="i=data"></div>
+</div>
+
+<div class="jumbotron" style="background: #add8e6;">
+    <div ng-class="State1.setClass($index)" ng-repeat="data in State1.datas" ng-include="'temp2'" ng-init="i=data"></div>
+</div>
+
+
+<script type="text/ng-template" id="temp2">
+      <div class="panel-heading">{{i.name}}</div>
+      <div class="panel-body">
+          <div ng-repeat="module in i.modules" ng-class="{true:'btn btn-default btn-outline btn-block',false:'btn btn-success btn-outline btn-block'}[module.type=='query']">{{module.type}}</div>
+       </div>
+    {{State1.data}}
+</script>
+

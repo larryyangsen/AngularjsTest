@@ -1,3 +1,112 @@
+<a name="1.0.0"></a>
+# 1.0.0 (2015-05-29)
+
+
+## Bug Fixes
+
+- use parent element instead of head to insert files in native loaded
+ ([ad4276a3](https://github.com/ocombe/ocLazyLoad/commit/ad4276a39cddf8ebfd8f247690e98fc306c2d3bb),
+ [#164](https://github.com/ocombe/ocLazyLoad/issues/164))
+- don't compile text nodes in the directive
+ ([8900e493](https://github.com/ocombe/ocLazyLoad/commit/8900e493b8245084f4871d129250ffc54e565639),
+ [#168](https://github.com/ocombe/ocLazyLoad/issues/168))
+- files cache should be cleaned upon resolution of the promise
+ ([9a186c93](https://github.com/ocombe/ocLazyLoad/commit/9a186c93ccb72c63a45e40c6c1e86319d9d004fa),
+ [#189](https://github.com/ocombe/ocLazyLoad/issues/189))
+- reject promise when calling 'load' instead of 'inject'
+ ([31595472](https://github.com/ocombe/ocLazyLoad/commit/315954729aaa609d43aa7eb7750e8804cff9bf70),
+ [#147](https://github.com/ocombe/ocLazyLoad/issues/147))
+- make inject work as a standalone function when no params are given
+ ([499bd72d](https://github.com/ocombe/ocLazyLoad/commit/499bd72ddaf6addbf2c649a48776bd2b6ff35227),
+ [#171](https://github.com/ocombe/ocLazyLoad/issues/171))
+- guard against null-refs when parsing Safari user-agents
+ ([818aa5d0](https://github.com/ocombe/ocLazyLoad/commit/818aa5d0ddaa3909109d42b38f8921e9d4b18cda),
+ [#188](https://github.com/ocombe/ocLazyLoad/issues/188))
+- checking if we're not registering a component with a reserved name (such at `toString`)
+ ([7362ca49](https://github.com/ocombe/ocLazyLoad/commit/7362ca493384c5b14e203b9c013085cbcab980f8 ),
+ [#184](https://github.com/ocombe/ocLazyLoad/issues/184))
+
+
+<a name="1.0.0-beta.2"></a>
+# 1.0.0-beta.2 (2015-04-20)
+
+
+## Bug Fixes
+
+- Die infinite loops! You are not fun anymore (with param serie:true)
+ ([dab34c0a](https://github.com/ocombe/ocLazyLoad/commit/dab34c0a3513061665850f68d983c1f2729f5f5a),
+ [#166](https://github.com/ocombe/ocLazyLoad/issues/166))
+
+
+<a name="1.0.0-beta.1"></a>
+# 1.0.0-beta.1 (2015-04-16)
+
+
+## Bug Fixes
+
+- use document.querySelector for insertBefore when jQuery isn't available
+ ([6e8fa8c3](https://github.com/ocombe/ocLazyLoad/commit/6e8fa8c37f4305c50241288db7fddc5ecae0ab8f),
+ [#164](https://github.com/ocombe/ocLazyLoad/issues/164))
+
+
+## Documentation
+
+- adding a plunkr for issues
+ ([2f408d27](https://github.com/ocombe/ocLazyLoad/commit/2f408d2729eaf3df9cc8434375611a5b26181c0b))
+
+
+<a name="1.0.0-alpha.3"></a>
+# 1.0.0-alpha.3 (2015-04-09)
+
+
+## Bug Fixes
+
+- components can be registered as object maps now
+ ([08ed860e](https://github.com/ocombe/ocLazyLoad/commit/08ed860e7051f1f0dd132d760b958c5be1114177),
+ [#156](https://github.com/ocombe/ocLazyLoad/issues/156))
+- make a real copy of the params
+ ([6a5d3d4c](https://github.com/ocombe/ocLazyLoad/commit/6a5d3d4ca3fca1e90468aed10ef96f06669cd7f9),
+ [#160](https://github.com/ocombe/ocLazyLoad/issues/160))
+
+
+## Features
+
+- ES6fy all the things!
+ ([9cae48c8](https://github.com/ocombe/ocLazyLoad/commit/9cae48c828665e58132950d6db138d082f6bf2a2))
+
+
+<a name="1.0.0-alpha2"></a>
+# 1.0.0-alpha2 (2015-03-23)
+
+
+## Bug Fixes
+
+- hash shouldn't prevent file type detection
+ ([9e1d0894](https://github.com/ocombe/ocLazyLoad/commit/9e1d089413e09b14b7b46d5ff5de4612613be5e9),
+ [#153](https://github.com/ocombe/ocLazyLoad/issues/153))
+
+
+<a name="1.0.0-alpha1"></a>
+# 1.0.0-alpha1 (2015-03-19)
+
+
+## Features
+
+- ocLazyLoad is now modular and (partially) written in ES6! It should be easier to write new loaders (or even extensions), and you can cherry picks the parts that you like. For example, you can use the injector without the loaders. Also, all of the internal functions are available (preceded by an underscore, and undocumented), use them at your own risk (in fact you shouldn't need them unless you're writing an extension).
+
+
+## Bug Fixes
+
+- the directive should append the content and not add it after
+- only the modules added via angular.bootstrap should be considered "already loaded"
+ [#147](https://github.com/ocombe/ocLazyLoad/issues/147)
+ 
+## TODO before the release
+- try to remove most of the promises for perfs/tests
+- use moaaar ES6
+- clean up the code
+
+
 <a name="0.6.3"></a>
 # 0.6.3 (2015-03-09)
 

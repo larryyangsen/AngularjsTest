@@ -16,6 +16,7 @@ gulp.task('watch',function(){
     gulp.watch('lang/*.json',['lang']);
     gulp.watch('style/*.css',['css']);
     gulp.watch('views/*.html',['views']);
+    gulp.watch('services/*',['services']);
 });
 gulp.task('index',function(){
     gulp.src(['*.js','*.html']).pipe(connect.reload());
@@ -28,6 +29,9 @@ gulp.task('controller',function(){
 });
 gulp.task('directive',function(){
     gulp.src('directive/*').pipe(connect.reload());
+});
+gulp.task('services',function(){
+    gulp.src('services/*').pipe(connect.reload());
 });
 gulp.task('lang',function(){
     gulp.src('lang/*.json').pipe(connect.reload());

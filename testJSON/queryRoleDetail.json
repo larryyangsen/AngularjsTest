@@ -1,0 +1,48 @@
+{
+  "collection": {
+    "version": "1.0",
+    "href": "/queryRoles/38d7660d-cc9f-47f2-bcaf-20d3f3d42d6f",
+    "links": [
+      {
+        "href": "/queryRoles/38d7660d-cc9f-47f2-bcaf-20d3f3d42d6f/template",
+        "rel": "editor"
+      },
+      {
+        "href": "/queryRoles/38d7660d-cc9f-47f2-bcaf-20d3f3d42d6f",
+        "rel": "remove"
+      }
+    ],
+    "items": [
+      {
+        "href": "/queryRoles/38d7660d-cc9f-47f2-bcaf-20d3f3d42d6f",
+        "data": [
+          {
+            "name": "title",
+            "value": "HAHA"
+          },
+          {
+            "name": "note",
+            "value": ""
+          },
+          {
+            "name": "employees",
+            "array": [
+              "iris"
+            ]
+          },
+          {
+            "name": "recfilters",
+            "array": [
+              "Andy1001689",
+              "Andy1001691"
+            ]
+          },
+          {
+            "name": "recform",
+            "value": "UN_SN_FN_ET_ST"
+          }
+        ]
+      }
+    ]
+  }
+}
